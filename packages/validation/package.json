@@ -1,0 +1,15 @@
+{
+  "name": "@guava/validation",
+  "version": "1.0.0",
+  "description": "Guava validation modules",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write src/**/*.{ts}"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "zod": "^1.11.11"
+  }
+}

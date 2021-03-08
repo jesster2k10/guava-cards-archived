@@ -1,0 +1,35 @@
+{
+  "name": "@guava/database",
+  "version": "1.0.0",
+  "description": "Guava persistence layer",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write src/**/*.ts"
+  },
+  "dependencies": {
+    "@guava/validation": "1.0.0",
+    "@nozbe/watermelondb": "^0.20.0",
+    "better-sqlite3": "^7.1.2",
+    "json-schema-to-ts": "^1.6.0",
+    "leveldown": "^5.6.0",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.1.20",
+    "pouchdb-adapter-http": "^7.2.2",
+    "pouchdb-adapter-idb": "^7.2.2",
+    "pouchdb-adapter-leveldb": "^7.2.2",
+    "pouchdb-adapter-react-native-sqlite": "^3.0.1",
+    "react-native-sqlite-2": "^3.1.1",
+    "rxdb": "^9.15.0",
+    "rxjs": "^6.6.6",
+    "zod": "^1.11.11"
+  },
+  "peerDependencies": {
+    "rxjs": "6.*"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "json-schema-to-typescript": "^10.1.3"
+  }
+}

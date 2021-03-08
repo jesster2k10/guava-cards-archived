@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/application/*": ["./application/*"],
+      "@/config/*": ["./application/*"],
+      "@/layout/*": ["./layout/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/theme/*": ["./theme/*"],
+      "@/utils/*": ["./utils/*"],
+      "~/*": ["./bundles/*"]
+    }
+  },
+  "extends": "../../tsconfig.json"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@guava/desktop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --watch src --exec \"electron .\"",
+    "compile": "tsc -b --incremental",
+    "format": "prettier --write {.,src}/**/*.{js,jsx,ts,tsx,json}",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "electron": "^12.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  }
+}
