@@ -3,7 +3,7 @@
  */
 
 import {Box} from '@chakra-ui/react';
-import {Link, LinkProps} from '../../bundles/shared/link';
+import {Link, LinkProps} from '~/shared/link';
 
 interface SidebarLinkProps extends LinkProps {
   title: string;

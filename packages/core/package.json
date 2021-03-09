@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "@guava/database": "1.0.0",
+    "@guava/observable-hooks": "*",
     "lodash": "^4.17.21",
     "observable-hooks": "^4.0.3"
   },

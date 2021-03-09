@@ -16,11 +16,11 @@ const block = {
   },
 };
 
-export default {
+const layers = {
   block,
   secondaryButton: {
     color: 'secondary',
-    _hover: { color: 'text' },
+    _hover: {color: 'text'},
     transition: 'var(--transition)',
     fontSize: 'xs',
     fontWeight: 'medium',
@@ -45,6 +45,7 @@ export default {
       ...block,
       width: '100%',
       px: 2,
+      py: 1,
       fontWeight: 'regular',
       d: 'flex',
       alignItems: 'center',
@@ -55,7 +56,6 @@ export default {
         flexDir: 'column',
       },
       header: {
-        textStyle: 'uppercase',
         px: 2,
         mb: 1,
         fontSize: 'xs',
@@ -71,6 +71,7 @@ export default {
         mb: 1,
         '&:last-child': {
           mb: 0,
+          borderBottomWidth: 0,
         },
       },
     },
@@ -105,3 +106,5 @@ export default {
     bullet: {},
   },
 };
+
+export default layers;

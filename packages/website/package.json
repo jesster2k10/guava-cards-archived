@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "@guava/website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,12 +9,14 @@
     "@emotion/styled": "^11.1.5",
     "@guava/core": "1.0.0",
     "@guava/database": "1.0.0",
+    "@guava/observable-hooks": "*",
     "@meronex/icons": "^4.0.0",
     "dayjs": "^1.10.4",
     "framer-motion": "^3.10.0",
     "history": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-error-boundary": "^3.1.1",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.0.0-alpha.2",
     "react-scripts": "4.0.3",
@@ -41,11 +43,14 @@
     "customize-cra": "^1.0.0",
     "prettier": "^2.2.1",
     "react-app-rewired": "^2.1.8",
-    "typescript": "^4.1.2"
+    "serve": "^11.3.2",
+    "typescript": "^4.1.2",
+    "webpack-bundle-analyzer": "^4.4.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "serve": "serve -s build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json}",

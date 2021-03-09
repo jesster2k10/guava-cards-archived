@@ -13,6 +13,10 @@ export function createWindow() {
     width: 1000,
     height: 700,
     vibrancy: 'dark',
+    webPreferences: {
+      nodeIntegration: true,
+      nodeIntegrationInWorker: true,
+    },
   });
 
   mainWindow.loadURL(constants.LOAD_URL);

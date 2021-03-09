@@ -1,7 +1,8 @@
 import * as z from 'zod';
 import {Model as ModelType} from '@nozbe/watermelondb';
-import {map} from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
+import {Observable, throwError} from 'rxjs';
+import {NotFoundError} from '@guava/core';
 import {DatabaseInstance} from '../db-wrapper';
 import {ModelMap, ModelName} from '../interfaces';
 
@@ -33,7 +34,10 @@ export class AnyRepository<
     return this.database
       .collection(this.name)
       .findAndObserve(id)
-      .pipe(result => (result as any) as Observable<Record>);
+      .pipe(
+        map(result => (result as never) as Record),
+        catchError(() => throwError(new NotFoundError(this.name, id))),
+      );
   };
 
   update = async <S extends z.ZodType<any, any> = any>(

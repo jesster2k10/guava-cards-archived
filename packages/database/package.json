@@ -9,6 +9,7 @@
     "format": "prettier --write src/**/*.ts"
   },
   "dependencies": {
+    "@guava/core": "1.0.0",
     "@guava/validation": "1.0.0",
     "@nozbe/watermelondb": "^0.20.0",
     "better-sqlite3": "^7.1.2",

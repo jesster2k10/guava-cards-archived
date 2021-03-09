@@ -1,19 +1,3 @@
-/* Section markup
-<section>
-  <section-header>
-    <section-actions>
-      <section-action></section-action>
-    </section-actions>
-    <section-title></section-title>
-    <section-actions>
-      <section-action></section-action>
-      <section-action></section-action>
-    </section-actions>
-  </section-header>
-  <section-body></section-body>
-</section>
-*/
-
 import React from 'react';
 import {BoxProps, HStack} from '@chakra-ui/layout';
 import {SectionAside} from './section-aside';

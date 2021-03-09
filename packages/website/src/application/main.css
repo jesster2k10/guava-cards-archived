@@ -35,8 +35,7 @@ html,
 }
 
 @media (prefers-color-scheme: dark) {
-  :root,
-  html {
+  .no-js {
     --background: rgb(25, 25, 25);
     --text-color: white;
     --text-secondary: rgba(255, 255, 255, 0.45);

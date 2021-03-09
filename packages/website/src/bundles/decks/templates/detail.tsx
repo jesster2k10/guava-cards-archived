@@ -3,12 +3,14 @@ import {Breadcrumbs} from '@/layout/page/breadcrumbs';
 import {paths} from '@/application/paths';
 import {Page} from '@/layout/page';
 import {HStack, VStack} from '@chakra-ui/layout';
-import {IconText} from '~/shared/atoms/icon-text';
+import {IconText} from '~/shared/icon-text';
 import dayjs from 'dayjs';
 import ClockIcon from '@meronex/icons/ai/AiOutlineClockCircle';
 import CardsIcon from '@meronex/icons/mdc/MdcCardsOutline';
 import {DeckSection, DeckSectionActions} from '../organisms/deck-section';
-import {List} from '~/shared/molecules/list';
+import {List} from '~/shared/list';
+import {useMemo} from 'react';
+import {Button} from '@chakra-ui/button';
 
 export interface DeckDetailProps {
   deckId: string;
@@ -16,7 +18,8 @@ export interface DeckDetailProps {
 
 const DeckDetail = ({deckId}: DeckDetailProps) => {
   const deck = useFindSuspense('decks', deckId);
-  const cards = useObservableValue(deck.cards.observe(), []);
+  const cards$ = useMemo(() => deck.cards.observe(), [deck]);
+  const cards = useObservableValue(cards$, []);
 
   const breadcrumbs: Breadcrumbs = [
     {
@@ -37,7 +40,12 @@ const DeckDetail = ({deckId}: DeckDetailProps) => {
     <Page
       title={deck.displayName}
       subtitle={deck.detail}
-      breadcrumbs={breadcrumbs}>
+      breadcrumbs={breadcrumbs}
+      titleAside={
+        <Button variant="flat" size="sm">
+          Add Card
+        </Button>
+      }>
       <HStack
         mb={4}
         mt={!deck.detail ? -1 : 0}

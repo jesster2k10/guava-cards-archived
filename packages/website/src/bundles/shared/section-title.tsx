@@ -9,13 +9,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   children,
   ...props
 }) => (
-  <Box
-    as="h3"
-    fontSize="md"
-    fontWeight="semibold"
-    color="text"
-    textAlign="left"
-    {...props}>
+  <Box as="h3" fontSize="md" fontWeight="semibold" textAlign="left" {...props}>
     {children}
   </Box>
 );

@@ -1,6 +1,11 @@
 import {Box} from '@chakra-ui/react';
+import {NotFoundError} from '@guava/core';
 
-const NotFoundPage = () => {
+interface NotFoundPageProps {
+  error?: NotFoundError;
+}
+
+const NotFoundPage = ({error}: NotFoundPageProps) => {
   return <Box>404 Bitch</Box>;
 };
 

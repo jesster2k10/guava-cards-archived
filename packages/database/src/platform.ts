@@ -10,7 +10,7 @@ export function isElectron() {
   if (
     typeof process !== 'undefined' &&
     typeof process.versions === 'object' &&
-    !!process.versions.electron
+    !!(process.versions as any).electron
   ) {
     return true;
   }

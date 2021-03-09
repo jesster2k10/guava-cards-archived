@@ -6,6 +6,7 @@ const {
   babelInclude,
   addBabelPlugin,
   addBabelPreset,
+  addBundleVisualizer,
 } = require('customize-cra');
 const path = require('path');
 
@@ -15,6 +16,7 @@ module.exports = override(
     path.resolve(__dirname, '..', 'core'),
     path.resolve(__dirname, '..', 'database'),
     path.resolve(__dirname, '..', 'validation'),
+    path.resolve(__dirname, '..', 'observable-hooks'),
   ]),
   disableEsLint(),
   addDecoratorsLegacy(),
@@ -35,4 +37,6 @@ module.exports = override(
       ],
     },
   ]),
+  addBundleVisualizer({}, true),
+  // setWebpackTarget('electron-renderer'),
 );

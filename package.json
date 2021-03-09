@@ -11,8 +11,13 @@
       "packages/validation",
       "packages/website",
       "packages/core",
-      "packages/backend"
+      "packages/backend",
+      "packages/observable-hooks"
     ]
+  },
+  "scripts": {
+    "web:start": "yarn workspace @guava/website start",
+    "desktop:start": "yarn workspace @guava/desktop dev"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",

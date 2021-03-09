@@ -2,7 +2,8 @@ import {
   ObservableResource,
   useObservableState,
   useObservableSuspense,
-} from 'observable-hooks';
+} from '@guava/observable-hooks';
+import {useMemo} from 'react';
 import {RepositoryName, useAnyRepository} from './useAnyRepository';
 
 export function useFind(name: RepositoryName, id: string) {
@@ -15,8 +16,11 @@ export function useFind(name: RepositoryName, id: string) {
 
 export function useFindSuspense(name: RepositoryName, id: string) {
   const repository = useAnyRepository(name);
-  const find$ = repository.findById(id);
-  const resource = new ObservableResource(find$, value => !!value);
+  const resource = useMemo(() => {
+    const find$ = repository.findById(id);
+    const observableResource = new ObservableResource(find$, value => !!value);
+    return observableResource;
+  }, [id, repository]);
 
   return useObservableSuspense(resource);
 }

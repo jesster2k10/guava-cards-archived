@@ -1,37 +1,31 @@
+import React, {Children, useState, useRef, useCallback, useEffect} from 'react';
 import {Box, SlideFade} from '@chakra-ui/react';
-import {useCallback, useEffect, useRef, useState} from 'react';
-
-export interface ContextMenuItem {
-  title: string;
-  hint?: string;
-  Icon?: React.ComponentType;
-  action?: () => void;
-}
-
-export interface ContextMenuGroup {
-  key: string;
-  header?: React.ReactNode;
-  footer?: React.ReactNode;
-  items: ContextMenuItem[];
-}
+import {IContextMenuGroup, ContextMenuGroup} from './context-menu-group';
+import {ContextMenuItem, IContextMenuItem} from './context-menu-item';
 
 interface ContextMenuProps {
   children: React.ReactNode;
-  items?: ContextMenuItem[];
-  groups?: ContextMenuGroup[];
+  items?: IContextMenuItem[];
+  groups?: IContextMenuGroup[];
 }
 
-const ContextMenu = ({
-  children,
-  items = [],
-  groups: propsGroups,
-}: ContextMenuProps) => {
+const ContextMenuContent = ({children}: {children: React.ReactNode}) => (
+  <>{children}</>
+);
+
+const ContextMenu = ({children, items, groups}: ContextMenuProps) => {
+  const childArray = Children.toArray(children);
+  const childGroups = childArray.filter(
+    (child: any) => child.type === ContextMenuGroup,
+  );
+  const childContent = childArray.filter(
+    (child: any) =>
+      child.type !== ContextMenuGroup || child.type === ContextMenuContent,
+  );
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const container = useRef<HTMLDivElement | null>(null);
-  const groups: ContextMenuGroup[] =
-    propsGroups ?? [{items, key: 'default'}] ?? [];
 
   const handleCloseMenu = useCallback(() => {
     if (menuOpen) setMenuOpen(false);
@@ -63,7 +57,7 @@ const ContextMenu = ({
 
   return (
     <div ref={container}>
-      {children}
+      {childContent}
       <SlideFade
         in={menuOpen}
         style={{
@@ -73,36 +67,24 @@ const ContextMenu = ({
           pointerEvents: menuOpen ? 'auto' : 'none',
         }}>
         <Box layerStyle="menu.wrapper">
-          {groups.map(group => (
-            <Box key={group.key} layerStyle="menu.group.wrapper">
-              {group.header && (
-                <Box layerStyle="menu.group.header">{group.header}</Box>
-              )}
-              <Box layerStyle="menu.group.items">
-                {group.items.map((item, index) => (
-                  <Box
-                    role="button"
-                    onClick={item.action}
-                    tabIndex={index}
-                    onKeyDown={item.action}
-                    layerStyle="menu.item">
-                    {item.Icon && (
-                      <Box mr={2}>
-                        <item.Icon />
-                      </Box>
-                    )}
-                    <Box>{item.title}</Box>
-                    <Box>{item.hint}</Box>
-                  </Box>
-                ))}
-              </Box>
-              <Box layerStyle="menu.group.footer">{group.footer}</Box>
-            </Box>
-          ))}
+          {groups
+            ? groups.map(group => (
+                <ContextMenuGroup
+                  items={group.items}
+                  key={group.key}
+                  header={group.header}
+                  footer={group.footer}
+                />
+              ))
+            : childGroups}
         </Box>
       </SlideFade>
     </div>
   );
 };
+
+ContextMenu.Children = ContextMenuContent;
+ContextMenu.Group = ContextMenuGroup;
+ContextMenu.Item = ContextMenuItem;
 
 export {ContextMenu};

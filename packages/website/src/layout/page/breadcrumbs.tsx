@@ -3,7 +3,7 @@
  */
 
 import {Box, BoxProps} from '@chakra-ui/react';
-import {Link} from '../../bundles/shared/link';
+import {Link} from '~/shared/link';
 
 export type Breadcrumbs = {title: string; path?: string}[];
 
