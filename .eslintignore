@@ -1,1 +1,6 @@
 packages/observable-hooks/src/**/*
+.eslintrc.js
+*.svg
+**/dist/**/*
+**/node_modules/**/*
+*.lock

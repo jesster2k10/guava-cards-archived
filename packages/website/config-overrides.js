@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable */
 const {
   override,
   addDecoratorsLegacy,
@@ -8,6 +8,8 @@ const {
   addBabelPreset,
   addBundleVisualizer,
 } = require('customize-cra');
+const {addReactRefresh} = require('customize-cra-react-refresh');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const path = require('path');
 
 module.exports = override(
@@ -37,6 +39,17 @@ module.exports = override(
       ],
     },
   ]),
+  addBabelPlugin('@babel/plugin-proposal-logical-assignment-operators'),
   addBundleVisualizer({}, true),
+  // addReactRefresh(),
+  config => {
+    config.plugins.find(
+      plugin => plugin instanceof ESLintPlugin,
+    ).options.emitWarning = false;
+    config.plugins.find(
+      plugin => plugin instanceof ESLintPlugin,
+    ).options.cache = true;
+    return config;
+  },
   // setWebpackTarget('electron-renderer'),
 );

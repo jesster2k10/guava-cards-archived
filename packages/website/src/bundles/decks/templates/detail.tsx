@@ -11,6 +11,7 @@ import {DeckSection, DeckSectionActions} from '../organisms/deck-section';
 import {List} from '~/shared/list';
 import {useMemo} from 'react';
 import {Button} from '@chakra-ui/button';
+import {useNavigate} from 'react-router';
 
 export interface DeckDetailProps {
   deckId: string;
@@ -20,6 +21,7 @@ const DeckDetail = ({deckId}: DeckDetailProps) => {
   const deck = useFindSuspense('decks', deckId);
   const cards$ = useMemo(() => deck.cards.observe(), [deck]);
   const cards = useObservableValue(cards$, []);
+  const navigate = useNavigate();
 
   const breadcrumbs: Breadcrumbs = [
     {
@@ -42,7 +44,10 @@ const DeckDetail = ({deckId}: DeckDetailProps) => {
       subtitle={deck.detail}
       breadcrumbs={breadcrumbs}
       titleAside={
-        <Button variant="flat" size="sm">
+        <Button
+          variant="flat"
+          size="sm"
+          onClick={() => navigate(paths.cards.add(deck))}>
           Add Card
         </Button>
       }>

@@ -2,11 +2,11 @@
  * Created by Jesse Onolememen. 27/02/2021
  */
 
-import {Children} from 'react';
 import {Box, BoxProps, Heading, HStack} from '@chakra-ui/react';
-import {PageMeta} from './meta';
-import {PageHeader} from './header';
+import {Children} from 'react';
 import {Breadcrumbs} from './breadcrumbs';
+import {PageHeader} from './header';
+import {PageMeta} from './meta';
 
 interface PageProps extends BoxProps {
   title?: string;
@@ -40,7 +40,7 @@ const Page = ({
             alignItems="center"
             justifyContent="space-between">
             <Box d="flex" flexDir="column">
-              <Heading fontSize="lg">{title}</Heading>
+              <Heading fontSize="2xl">{title}</Heading>
               {subtitle && (
                 <Heading<'h2'>
                   as="h2"

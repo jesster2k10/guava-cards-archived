@@ -8,7 +8,7 @@ import {RepositoryName, useAnyRepository} from './useAnyRepository';
 
 export function useFind(name: RepositoryName, id: string) {
   const repository = useAnyRepository(name);
-  const find$ = repository.findById(id);
+  const find$ = useMemo(() => repository.findById(id), [id, repository]);
   const data = useObservableState(find$);
 
   return data;

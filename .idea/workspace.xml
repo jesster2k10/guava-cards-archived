@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef490e62-3f58-40b4-a4e6-9ae57218cfe3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/database/useFind.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/database/useFind.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/database/src/models/card.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/database/src/models/card.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/validation/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/validation/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/config-overrides.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/config-overrides.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/application/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/application/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/application/paths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/application/paths.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/application/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/application/router.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/bundles/cards/routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/bundles/cards/shared.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/bundles/decks/templates/detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/bundles/decks/templates/detail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/bundles/shared/page-error.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/bundles/shared/page-error.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/config/resources.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/config/resources.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/layout/page/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/layout/page/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/Button.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/Header.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/Introduction.stories.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/Page.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/Page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/code-brackets.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/colors.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/comments.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/direction.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/flow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/plugin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/repo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/assets/stackalt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/stories/page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/website/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/website/src/theme/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pYzuOJRESEMb4JATKY8nEsBPgF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef490e62-3f58-40b4-a4e6-9ae57218cfe3" name="Default Changelist" comment="" />
+      <created>1615375034795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615375034795</updated>
+      <workItem from="1615375037122" duration="86000" />
+      <workItem from="1615375542522" duration="26000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

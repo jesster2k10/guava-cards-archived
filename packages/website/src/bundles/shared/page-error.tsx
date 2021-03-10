@@ -1,3 +1,4 @@
+import React from 'react';
 import {NotFoundPage} from '@/pages/not-found';
 import {Box, Button} from '@chakra-ui/react';
 import {NotFoundError} from '@guava/core';

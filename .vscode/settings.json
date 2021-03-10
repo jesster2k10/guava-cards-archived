@@ -1,0 +1,11 @@
+{
+  "eslint.workingDirectories": [
+    "packages/website",
+    "packages/core",
+    "packages/backend",
+    "packages/database",
+    "packages/desktop",
+    "packages/observable-hooks",
+    "packages/validation"
+  ]
+}

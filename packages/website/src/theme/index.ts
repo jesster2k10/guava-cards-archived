@@ -11,6 +11,7 @@ import Link from './components/link';
 import Modal from './components/modal';
 import Input from './components/input';
 import Heading from './components/heading';
+import Menu from './components/menu';
 
 FormLabel.defaultProps = {fontSize: 'sm'};
 
@@ -30,6 +31,7 @@ export const theme = extendTheme({
     Modal,
     Input,
     Heading,
+    Menu,
   },
   config: {
     initialColorMode:

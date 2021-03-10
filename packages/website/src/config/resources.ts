@@ -3,7 +3,7 @@ import isEmpty from 'lodash/isEmpty';
 
 type ResourceAction = 'show' | 'list' | 'edit' | 'new' | 'root' | 'dynamic';
 
-interface Identifiable {
+export interface Identifiable {
   id?: string;
 }
 

@@ -1,9 +1,17 @@
 import {useMemo} from 'react';
-import {resourcePaths as resource} from '../config/resources';
+import {resourcePaths as resource, Identifiable} from '../config/resources';
 
 export const paths = {
   decks: resource('d'),
-  cards: resource('c'),
+  cards: {
+    ...resource('c'),
+    add(deck: Identifiable) {
+      return `${this.new}/${deck.id}`;
+    },
+    for(deck: Identifiable) {
+      return `${this.list}?deckId=${deck.id}`;
+    },
+  },
 };
 
 paths.decks.dynamic(':deckId');

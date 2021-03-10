@@ -1,11 +1,11 @@
+import dayjs from 'dayjs';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import dayjs from 'dayjs';
 import {App} from './application/app';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
-import './config/globals';
 import './application/main.css';
+import './config/globals';
+import reportWebVitals from './reportWebVitals';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,11 +19,10 @@ ReactDOM.render(
 // Learn more about service workers: https://cra.link/PWA
 serviceWorkerRegistration.register();
 
-document.documentElement.classList.remove('no-js');
-
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 dayjs.extend(require('dayjs/plugin/localizedFormat'));

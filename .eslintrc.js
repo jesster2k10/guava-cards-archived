@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
@@ -6,9 +7,12 @@ module.exports = {
     'prettier',
   ],
   parserOptions: {
+    tsconfigRootDir: __dirname,
     project: './tsconfig.json',
   },
+  plugins: ['prettier'],
   rules: {
+    'prettier/prettier': 'error',
     'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -39,5 +43,10 @@ module.exports = {
       'error',
       {enums: false, typedefs: false, variables: false},
     ],
+    'import/extensions': [
+      'error',
+      {js: 'never', ts: 'never', tsx: 'never', jsx: 'never', json: 'always'},
+    ],
+    'react/require-default-props': 'off',
   },
 };
