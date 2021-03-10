@@ -3,15 +3,15 @@ import {Breadcrumbs} from '@/layout/page/breadcrumbs';
 import {paths} from '@/application/paths';
 import {Page} from '@/layout/page';
 import {HStack, VStack} from '@chakra-ui/layout';
-import {IconText} from '~/shared/icon-text';
 import dayjs from 'dayjs';
 import ClockIcon from '@meronex/icons/ai/AiOutlineClockCircle';
 import CardsIcon from '@meronex/icons/mdc/MdcCardsOutline';
-import {DeckSection, DeckSectionActions} from '../organisms/deck-section';
-import {List} from '~/shared/list';
 import {useMemo} from 'react';
 import {Button} from '@chakra-ui/button';
 import {useNavigate} from 'react-router';
+import {List} from '~/shared/list';
+import {DeckSection, DeckSectionActions} from '../organisms/deck-section';
+import {IconText} from '~/shared/icon-text';
 
 export interface DeckDetailProps {
   deckId: string;

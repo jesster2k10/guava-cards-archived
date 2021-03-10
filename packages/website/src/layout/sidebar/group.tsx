@@ -2,7 +2,7 @@
  * Created by Jesse Onolememen. 26/02/2021
  */
 
-import { Box, BoxProps, Button } from '@chakra-ui/react';
+import {Box, BoxProps, Button} from '@chakra-ui/react';
 
 interface SidebarGroupProps extends Omit<BoxProps, 'action'> {
   title?: string;
@@ -29,8 +29,7 @@ const SidebarGroup = ({
           px={3}
           pb={1}
           textStyle="uppercaseAlt"
-          justifyContent="space-between"
-        >
+          justifyContent="space-between">
           {title}
           {action && (
             <Box
@@ -39,8 +38,7 @@ const SidebarGroup = ({
               flexDir="row"
               alignItems="center"
               onClick={action}
-              layerStyle="secondaryButton"
-            >
+              layerStyle="secondaryButton">
               {ActionIcon && (
                 <Box mr={1}>
                   <ActionIcon />
@@ -58,4 +56,4 @@ const SidebarGroup = ({
   );
 };
 
-export { SidebarGroup };
+export {SidebarGroup};

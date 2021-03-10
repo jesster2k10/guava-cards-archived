@@ -54,15 +54,14 @@ export function List<T>({
 
   if (isEmptyState) {
     return <Text fontSize="sm">{emptyStateMessage}</Text>;
-  } else {
-    return (
-      <Box
-        d="flex"
-        flexDir={horizontal ? 'row' : 'column'}
-        flexWrap="wrap"
-        {...props}>
-        {data.map(renderItem)}
-      </Box>
-    );
   }
+  return (
+    <Box
+      d="flex"
+      flexDir={horizontal ? 'row' : 'column'}
+      flexWrap="wrap"
+      {...props}>
+      {data.map(renderItem)}
+    </Box>
+  );
 }

@@ -42,7 +42,7 @@ const ContextMenu = ({children, items, groups}: ContextMenuProps) => {
   );
 
   useEffect(() => {
-    const current = container.current;
+    const {current} = container;
     if (!current) return;
 
     document.addEventListener('click', handleCloseMenu);

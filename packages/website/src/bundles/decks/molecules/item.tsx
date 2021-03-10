@@ -1,9 +1,7 @@
 import {paths} from '@/application/paths';
 import {BoxProps} from '@chakra-ui/layout';
 import {Deck} from '@guava/database';
-import {Link} from '~/shared/link';
 import {chakra} from '@chakra-ui/react';
-import {ContextMenu} from '~/shared/context-menu';
 
 import EditIcon from '@meronex/icons/bi/BiEdit';
 import StudyIcon from '@meronex/icons/bi/BiPlayCircle';
@@ -12,6 +10,8 @@ import AddToQueueIcon from '@meronex/icons/bi/BiAddToQueue';
 import FolderIcon from '@meronex/icons/bi/BiFolder';
 import SortUpIcon from '@meronex/icons/bi/BiSortUp';
 import dayjs from 'dayjs';
+import {ContextMenu} from '~/shared/context-menu';
+import {Link} from '~/shared/link';
 
 export type DeckItemVariant = 'summary' | 'expanded';
 

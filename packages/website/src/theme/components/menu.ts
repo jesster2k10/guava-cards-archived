@@ -13,8 +13,8 @@ const Menu = {
       fontSize: 'sm',
     },
     icon: {
-      fontSize: 'xl'
-    }
+      fontSize: 'xl',
+    },
   },
 };
 

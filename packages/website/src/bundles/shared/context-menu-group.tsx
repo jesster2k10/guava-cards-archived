@@ -26,9 +26,8 @@ export const ContextMenuGroup = ({
     <Box layerStyle="menu.group.wrapper">
       <Box layerStyle="menu.group.header">{header}</Box>
       <Box layerStyle="menu.group.items">
-        {children
-          ? children
-          : items.map(item => <ContextMenuItem {...item} key={item.title} />)}
+        {children ||
+          items.map(item => <ContextMenuItem {...item} key={item.title} />)}
       </Box>
       <Box layerStyle="menu.group.footer">{footer}</Box>
     </Box>

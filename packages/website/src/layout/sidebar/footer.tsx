@@ -2,9 +2,9 @@
  * Created by Jesse Onolememen. 26/02/2021
  */
 
-import { Box, BoxProps } from '@chakra-ui/react';
+import {Box, BoxProps} from '@chakra-ui/react';
 
-interface SidebarFooterProps extends BoxProps {}
+type SidebarFooterProps = BoxProps;
 
 const SidebarFooter = (props: SidebarFooterProps) => {
   return (
@@ -14,4 +14,4 @@ const SidebarFooter = (props: SidebarFooterProps) => {
   );
 };
 
-export { SidebarFooter };
+export {SidebarFooter};

@@ -25,13 +25,13 @@ import mathSelectPlugin from './math-select';
 import './styles.css';
 
 export function insertMath() {
-  let mathType = editorSchema.nodes.inlinemath;
+  const mathType = editorSchema.nodes.inlinemath;
   return function (
     state: EditorState,
     dispatch: ((tr: Transaction) => void) | undefined,
   ) {
-    let {$from} = state.selection,
-      index = $from.index();
+    const {$from} = state.selection;
+    const index = $from.index();
     if (!$from.parent.canReplaceWith(index, index, mathType)) {
       return false;
     }

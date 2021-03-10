@@ -1,8 +1,8 @@
 import React from 'react';
-import {Section} from '~/shared/section';
 import FilterIcon from '@meronex/icons/bi/BiFilterAlt';
 import SearchIcon from '@meronex/icons/bi/BiSearch';
 import AddCardIcon from '@meronex/icons/md/MdAddCircleOutline';
+import {Section} from '~/shared/section';
 
 export enum DeckSectionActions {
   SEARCH,

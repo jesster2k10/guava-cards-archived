@@ -19,9 +19,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   return (
     <HStack as="header" borderBottomWidth={1} pb={2} mb={2} {...props}>
-      {children ? (
-        children
-      ) : (
+      {children || (
         <>
           {leftAside && <SectionAside>{leftAside}</SectionAside>}
           {title && <SectionTitle flex="1">{title}</SectionTitle>}

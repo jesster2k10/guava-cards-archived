@@ -9,11 +9,11 @@ export function inlineInputRule(
   getAttrs?: (match: string[]) => any,
 ) {
   return new InputRule(pattern, (state, match, start, end) => {
-    let $start = state.doc.resolve(start);
-    let index = $start.index();
-    let $end = state.doc.resolve(end);
+    const $start = state.doc.resolve(start);
+    const index = $start.index();
+    const $end = state.doc.resolve(end);
     // get attrs
-    let attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
+    const attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
     // check if replacement valid
     if (!$start.parent.canReplaceWith(index, $end.index(), nodeType)) {
       return null;
@@ -33,8 +33,8 @@ export function blockInputRule(
   getAttrs?: (match: string[]) => any,
 ) {
   return new InputRule(pattern, (state, match, start, end) => {
-    let $start = state.doc.resolve(start);
-    let attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
+    const $start = state.doc.resolve(start);
+    const attrs = getAttrs instanceof Function ? getAttrs(match) : getAttrs;
     console.log($start, attrs);
     if (
       !$start
@@ -42,7 +42,7 @@ export function blockInputRule(
         .canReplaceWith($start.index(-1), $start.indexAfter(-1), nodeType)
     )
       return null;
-    let tr = state.tr
+    const tr = state.tr
       .delete(start, end)
       .setBlockType(start, start, nodeType, attrs);
 
@@ -61,7 +61,7 @@ export const mathInputRules = inputRules({
       editorSchema.nodes.math_inline,
     ),
     // simpler version without the option to escape \$
-    //inlineInputRule(/\$(.+)\$/, editorSchema.nodes.math_inline),
+    // inlineInputRule(/\$(.+)\$/, editorSchema.nodes.math_inline),
     blockInputRule(/^\$\$\s+$/, editorSchema.nodes.math_display),
   ],
 });

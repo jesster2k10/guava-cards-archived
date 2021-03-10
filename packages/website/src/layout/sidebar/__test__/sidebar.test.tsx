@@ -1,9 +1,9 @@
-import { AuthProvider } from '@/context/auth';
-import { wrap, wrapComponent } from '@/__test__/wrap';
-import { ChakraProvider } from '@chakra-ui/react';
-import { createTestDatabase, DatabaseProvider } from '@guava/database';
-import { render, waitFor } from '@testing-library/react';
-import { Sidebar } from '..';
+import {AuthProvider} from '@/context/auth';
+import {wrap, wrapComponent} from '@/__test__/wrap';
+import {ChakraProvider} from '@chakra-ui/react';
+import {createTestDatabase, DatabaseProvider} from '@guava/database';
+import {render, waitFor} from '@testing-library/react';
+import {Sidebar} from '..';
 
 const database = createTestDatabase();
 
@@ -24,7 +24,7 @@ describe('Components | Sidebar', () => {
   };
 
   it('should render all the decks', async () => {
-    const screen = render(wrapComponent(Sidebar, { database }));
+    const screen = render(wrapComponent(Sidebar, {database}));
     expect(screen.getByText(/quantum physics/i)).not.toBeInTheDocument();
     expect(screen.getByText(/organic chemistry/i)).not.toBeInTheDocument();
     await createDecks();

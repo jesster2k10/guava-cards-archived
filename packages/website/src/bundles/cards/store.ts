@@ -45,7 +45,7 @@ const addCardStore = createSlice({
   } as AddCardsState,
   reducers: {
     initialize: (state, action: PayloadAction<{deckId: string}>) => {
-      const deckId = action.payload.deckId;
+      const {deckId} = action.payload;
       state.form[deckId] ||= {
         previous: [],
         current: {

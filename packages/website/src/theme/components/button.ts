@@ -6,7 +6,7 @@ export default {
     fontWeight: 'semibold',
     shadow: 'sm',
     borderWidth: 1,
-    _hover: { opacity: 0.85 },
+    _hover: {opacity: 0.85},
   },
   variants: {
     block: layers.block,

@@ -1,4 +1,4 @@
-import { ModalContent } from '@chakra-ui/react';
+import {ModalContent} from '@chakra-ui/react';
 
 ModalContent.defaultProps = {
   rounded: 'sm',
