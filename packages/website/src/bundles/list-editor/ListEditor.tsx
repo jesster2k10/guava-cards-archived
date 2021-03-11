@@ -1,5 +1,5 @@
 import {ListEditorBlockType} from '~/cards/store';
-import {ListEditorBlock} from './block';
+import {ListEditorBlock} from './ListEditorBlock';
 
 export interface ListEditorProps {
   blocks: ListEditorBlockType[];

@@ -1,8 +1,8 @@
 import {Box, chakra, SlideFade} from '@chakra-ui/react';
 import React, {useEffect, useState} from 'react';
-import {useEditor} from './context';
-import * as Icons from './icons';
-import {MenuAction} from './menu-action';
+import {useEditor} from './EditorContext';
+import * as Icons from './EditorIcons';
+import {MenuAction} from './MenuAction';
 
 interface MenuBarProps {
   label?: string;

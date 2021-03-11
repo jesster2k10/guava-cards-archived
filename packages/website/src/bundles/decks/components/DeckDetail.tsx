@@ -8,9 +8,9 @@ import CardsIcon from '@meronex/icons/mdc/MdcCardsOutline';
 import dayjs from 'dayjs';
 import {useMemo} from 'react';
 import {useNavigate} from 'react-router';
-import {IconText} from '~/shared/icon-text';
-import {List} from '~/shared/list';
-import {DeckSection, DeckSectionActions} from '../organisms/deck-section';
+import {IconText} from '~/shared/IconText';
+import {List} from '~/shared/List';
+import {DeckSection, DeckSectionActions} from './DeckSection';
 
 export interface DeckDetailProps {
   deckId: string;

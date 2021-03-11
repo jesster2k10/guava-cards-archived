@@ -1,6 +1,6 @@
 import {paths} from '@/application/paths';
 import {PartialRouteObject} from 'react-router';
-import {NewCardPage} from './pages/new';
+import {NewCardPage} from './pages/NewCard';
 
 export const cardsRoutes: PartialRouteObject = {
   path: paths.cards.root,

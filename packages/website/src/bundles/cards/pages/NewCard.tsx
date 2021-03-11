@@ -1,7 +1,7 @@
 import {Page} from '@/layout/page';
 import {chakra} from '@chakra-ui/react';
 import {ContentEditor} from '~/editor';
-import {CardEditorToolbar} from '../components/toolbar';
+import {CardEditorToolbar} from '../components/EditorToolbar';
 import {useCardEditorPage} from '../hooks';
 
 export function NewCardPage() {

@@ -1,6 +1,6 @@
 import {Box, BoxProps, Tooltip, VisuallyHidden} from '@chakra-ui/react';
 import React from 'react';
-import {useEditor} from './context';
+import {useEditor} from './EditorContext';
 
 interface MenuActionProps extends BoxProps {
   Icon?: React.ComponentType;

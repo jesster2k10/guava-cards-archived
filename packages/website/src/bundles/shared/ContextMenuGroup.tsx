@@ -1,5 +1,5 @@
 import {Box} from '@chakra-ui/react';
-import {ContextMenuItem, IContextMenuItem} from './context-menu-item';
+import {ContextMenuItem, IContextMenuItem} from './ContextMenuItem';
 
 export interface IContextMenuGroup {
   key: string;

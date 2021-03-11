@@ -1,7 +1,6 @@
-import React from 'react';
 import {PartialRouteObject} from 'react-router';
 import {paths} from '../../application/paths';
-import ShowDeck from './show';
+import DeckPage from './pages/Deck';
 
 export const decksRoutes: PartialRouteObject = {
   path: paths.decks.root,
@@ -16,7 +15,7 @@ export const decksRoutes: PartialRouteObject = {
     },
     {
       path: '/:deckId',
-      element: <ShowDeck />,
+      element: <DeckPage />,
     },
     {
       path: '/:deckId/edit',

@@ -1,4 +1,4 @@
-import {Box} from '@chakra-ui/layout';
+import {Box} from '@chakra-ui/react';
 import {css} from '@emotion/react';
 import {Editor} from '@tiptap/core';
 import Document from '@tiptap/extension-document';

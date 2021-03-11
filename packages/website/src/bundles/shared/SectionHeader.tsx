@@ -1,7 +1,7 @@
 import {BoxProps, HStack} from '@chakra-ui/react';
 import React from 'react';
-import {SectionAside} from './section-aside';
-import {SectionTitle} from './section-title';
+import {SectionAside} from './SectionAside';
+import {SectionTitle} from './SectionTitle';
 
 export interface SectionHeaderProps extends BoxProps {
   title?: string;

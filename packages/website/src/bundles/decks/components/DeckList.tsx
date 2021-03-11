@@ -4,7 +4,7 @@
 
 import {Box, BoxProps} from '@chakra-ui/react';
 import {Deck} from '@guava/database';
-import {DeckItem} from '../molecules/item';
+import {DeckItem} from './DeckItem';
 
 interface DeckListProps extends BoxProps {
   decks: Deck[];

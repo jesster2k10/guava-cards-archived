@@ -8,8 +8,8 @@ import StudyIcon from '@meronex/icons/bi/BiPlayCircle';
 import SortDownIcon from '@meronex/icons/bi/BiSortDown';
 import SortUpIcon from '@meronex/icons/bi/BiSortUp';
 import dayjs from 'dayjs';
-import {ContextMenu} from '~/shared/context-menu';
-import {Link} from '~/shared/link';
+import {ContextMenu} from '~/shared/ContextMenu';
+import {Link} from '~/shared/Link';
 
 export type DeckItemVariant = 'summary' | 'expanded';
 

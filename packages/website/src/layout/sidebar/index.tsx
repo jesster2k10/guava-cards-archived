@@ -4,19 +4,18 @@
 
 import {chakra} from '@chakra-ui/react';
 import {useSidebar} from '@guava/core';
-
-import HiHome from '@meronex/icons/hi/HiHome';
-import FaChartPie from '@meronex/icons/fa/FaChartPie';
-import BsFillPeopleFill from '@meronex/icons/bs/BsFillPeopleFill';
-import MdcCloudSync from '@meronex/icons/mdc/MdcCloudSync';
 import BisCog from '@meronex/icons/bi/BisCog';
+import BsFillPeopleFill from '@meronex/icons/bs/BsFillPeopleFill';
+import FaChartPie from '@meronex/icons/fa/FaChartPie';
+import HiHome from '@meronex/icons/hi/HiHome';
 import MdAdd from '@meronex/icons/ios/MdAdd';
-
-import {DeckList} from '../../bundles/decks/organisms/list';
-import {SidebarHeader} from './header';
-import {SidebarGroup} from './group';
+import MdcCloudSync from '@meronex/icons/mdc/MdcCloudSync';
+import {DeckList} from '../../bundles/decks/organisms/DeckList';
 import {SidebarFooter} from './footer';
+import {SidebarGroup} from './group';
+import {SidebarHeader} from './header';
 import {SidebarLink} from './link';
+
 // import {AddDeck} from '../../bundles/decks/components/add';
 
 const WIDTH = 240;

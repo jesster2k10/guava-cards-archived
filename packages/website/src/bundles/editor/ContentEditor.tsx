@@ -6,9 +6,9 @@ import Typography from '@tiptap/extension-typography';
 import Underline from '@tiptap/extension-underline';
 import {defaultExtensions} from '@tiptap/starter-kit';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
-import {EditorContext} from './context';
+import {EditorContext} from './EditorContext';
 import {MathExtension} from './math';
-import {MenuBar} from './menu-bar';
+import {MenuBar} from './MenuBar';
 
 export type EditorValue = Content;
 interface ContentEditorProps extends Omit<BoxProps, 'value' | 'onChange'> {

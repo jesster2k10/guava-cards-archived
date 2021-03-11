@@ -2,7 +2,7 @@ import FilterIcon from '@meronex/icons/bi/BiFilterAlt';
 import SearchIcon from '@meronex/icons/bi/BiSearch';
 import AddCardIcon from '@meronex/icons/md/MdAddCircleOutline';
 import React, {Fragment} from 'react';
-import {Section} from '~/shared/section';
+import {Section} from '~/shared/Section';
 
 export enum DeckSectionActions {
   SEARCH,

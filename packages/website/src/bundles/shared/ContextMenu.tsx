@@ -1,7 +1,7 @@
 import {Box, SlideFade} from '@chakra-ui/react';
 import React, {Children, useCallback, useEffect, useRef, useState} from 'react';
-import {ContextMenuGroup, IContextMenuGroup} from './context-menu-group';
-import {ContextMenuItem, IContextMenuItem} from './context-menu-item';
+import {ContextMenuGroup, IContextMenuGroup} from './ContextMenuGroup';
+import {ContextMenuItem, IContextMenuItem} from './ContextMenuItem';
 
 interface ContextMenuProps {
   children: React.ReactNode;
