@@ -3,25 +3,21 @@ import {useAppDispatch, useAppSelector} from '@/application/store';
 import {Breadcrumbs} from '@/layout/page/breadcrumbs';
 import {useFind, useParam} from '@guava/core';
 import {useCallback, useEffect, useMemo} from 'react';
-import {EditorValue} from '~/editor';
 import {
-  AddCardEditor,
-  currentEditorListBlocks,
   currentEditorSelector,
   currentEditorValuesSelector,
-  EditorValueType,
   initialzeCardEditor,
-  ListEditorBlockType,
   setCardEditor,
-  setCardEditorListBlocks,
   setCardEditorValue,
 } from './store';
+import {AddCardEditor, AllEditorValues} from './types';
 
 export function useCardEditor(deckId: string) {
   const dispatch = useAppDispatch();
   const currentEditor = useAppSelector(currentEditorSelector(deckId));
-  const editorValues = useAppSelector(currentEditorValuesSelector(deckId));
-  const editorListBlocks = useAppSelector(currentEditorListBlocks(deckId));
+  const editorValue = useAppSelector(
+    currentEditorValuesSelector(deckId, currentEditor),
+  );
 
   useEffect(() => {
     dispatch(initialzeCardEditor({deckId}));
@@ -33,35 +29,22 @@ export function useCardEditor(deckId: string) {
   );
 
   const setEditorValue = useCallback(
-    (valueType: EditorValueType, value: EditorValue) =>
+    (value: Partial<AllEditorValues>, editor = currentEditor) =>
       dispatch(
         setCardEditorValue({
           deckId,
           value,
-          type: valueType,
+          editor,
         }),
       ),
-    [deckId, dispatch],
-  );
-
-  const setEditorListBlocks = useCallback(
-    (blocks: ListEditorBlockType[]) =>
-      dispatch(
-        setCardEditorListBlocks({
-          blocks,
-          deckId,
-        }),
-      ),
-    [deckId, dispatch],
+    [deckId, dispatch, currentEditor],
   );
 
   return {
     currentEditor,
     setCurrentEditor,
-    editorValues,
+    editorValue,
     setEditorValue,
-    setEditorListBlocks,
-    editorListBlocks,
   };
 }
 

@@ -1,5 +1,5 @@
 import {Box} from '@chakra-ui/react';
-import {AddCardEditor} from '../store';
+import {AddCardEditor} from '../types';
 import {CardType} from './CardType';
 
 interface CardEditorToolbarProps {

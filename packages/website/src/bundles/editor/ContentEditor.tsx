@@ -18,6 +18,7 @@ interface ContentEditorProps extends Omit<BoxProps, 'value' | 'onChange'> {
   autofocus?: boolean;
   placeholder?: string;
   label?: string;
+  menuBar?: boolean;
 }
 
 const ContentEditor = (props: ContentEditorProps) => {
@@ -29,6 +30,7 @@ const ContentEditor = (props: ContentEditorProps) => {
     placeholder = 'Type something...',
     autofocus,
     label,
+    menuBar = true,
     ...rest
   } = props;
   const [editor, setEditor] = useState<Editor | null>(null);
@@ -66,7 +68,7 @@ const ContentEditor = (props: ContentEditorProps) => {
       <Wrapper pos="relative" {...rest}>
         {editorRef.current && (
           <>
-            <MenuBar label={label} />
+            {menuBar && <MenuBar label={label} />}
             {placeholderVisible && (
               <Box pos="absolute" color="secondary">
                 {placeholder}

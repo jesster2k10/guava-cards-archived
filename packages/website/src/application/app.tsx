@@ -6,8 +6,8 @@ import {PersistGate} from 'redux-persist/integration/react';
 import {PageMeta} from '../layout/page/meta';
 import {theme} from '../theme';
 import {Router} from './Router';
-import {Styles} from './Stlyes';
 import {persistor, store} from './store';
+import {Styles} from './Styles';
 
 const App = () => {
   return (

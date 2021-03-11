@@ -10,7 +10,7 @@ import FaChartPie from '@meronex/icons/fa/FaChartPie';
 import HiHome from '@meronex/icons/hi/HiHome';
 import MdAdd from '@meronex/icons/ios/MdAdd';
 import MdcCloudSync from '@meronex/icons/mdc/MdcCloudSync';
-import {DeckList} from '../../bundles/decks/organisms/DeckList';
+import {DeckList} from '../../bundles/decks/components/DeckList';
 import {SidebarFooter} from './footer';
 import {SidebarGroup} from './group';
 import {SidebarHeader} from './header';

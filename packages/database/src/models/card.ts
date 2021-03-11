@@ -4,7 +4,7 @@ import readonly from '@nozbe/watermelondb/decorators/readonly';
 import relation from '@nozbe/watermelondb/decorators/relation';
 import Model from '@nozbe/watermelondb/Model';
 
-export type CardType = 'basic' | 'cloze' | 'list' | 'type-answer';
+export type CardType = 'basic' | 'cloze' | 'list' | 'typeAnswer';
 
 export class Card extends Model {
   static table = 'cards';

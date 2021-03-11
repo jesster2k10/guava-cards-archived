@@ -18,14 +18,14 @@ export interface CardTypeProps {
 }
 
 const CardType = ({
-  options = ['basic', 'cloze', 'list', 'type-answer'],
+  options = ['basic', 'cloze', 'list', 'typeAnswer'],
   value,
   setValue,
 }: CardTypeProps) => {
   const {title: currentTitle} = infoForCardType(value);
 
   return (
-    <Menu closeOnSelect={false}>
+    <Menu closeOnSelect>
       <MenuButton as="div" role="button">
         <Box w="max-content" d="flex" alignItems="center" flexDir="row">
           <Box mr={1} noOfLines={1} w="full" fontSize="sm" fontWeight="medium">

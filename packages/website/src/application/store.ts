@@ -31,6 +31,11 @@ store.replaceReducer(persistedReducer as never);
 
 const persistor = persistStore(store);
 
+if (process.env.NODE_ENV === 'development') {
+  (window as any).persistor = persistor;
+  (window as any).store = store;
+}
+
 export type AppState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 

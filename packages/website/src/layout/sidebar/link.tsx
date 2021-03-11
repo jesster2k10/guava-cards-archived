@@ -29,7 +29,7 @@ const SidebarLink = ({title, Icon, to, ...props}: SidebarLinkProps) => {
       flexDir="row"
       alignItems="center"
       className="sidebar-link"
-      exact
+      exact={false}
       {...props}>
       {icon && <Box mr={2}>{icon}</Box>}
       <Box lineHeight={1}>{title}</Box>

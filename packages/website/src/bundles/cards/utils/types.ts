@@ -22,7 +22,7 @@ export const infoForCardType = (cardType: CardType): CardTypeInfo => {
         title: 'List',
         info: 'A flashcard with front and a list of answer options',
       };
-    case 'type-answer':
+    case 'typeAnswer':
       return {
         title: 'Type Answer',
         info: 'A basic flashard where you type in the answer',
