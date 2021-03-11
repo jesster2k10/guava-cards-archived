@@ -1,5 +1,5 @@
+import {BoxProps, HStack} from '@chakra-ui/react';
 import React from 'react';
-import {BoxProps, HStack} from '@chakra-ui/layout';
 import {SectionAside} from './section-aside';
 import {SectionTitle} from './section-title';
 
@@ -10,13 +10,13 @@ export interface SectionHeaderProps extends BoxProps {
   children?: React.ReactNode;
 }
 
-export const SectionHeader: React.FC<SectionHeaderProps> = ({
+export const SectionHeader = ({
   title,
   leftAside,
   rightAside,
   children,
   ...props
-}) => {
+}: SectionHeaderProps) => {
   return (
     <HStack as="header" borderBottomWidth={1} pb={2} mb={2} {...props}>
       {children || (

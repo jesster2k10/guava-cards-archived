@@ -1,6 +1,6 @@
-import React from 'react';
-import {Box, BoxProps, Text} from '@chakra-ui/layout';
+import {Box, BoxProps, Text} from '@chakra-ui/react';
 import isEmpty from 'lodash/isEmpty';
+import React from 'react';
 
 export interface ListItemComponent<T> {
   data: T;
@@ -50,6 +50,8 @@ export function List<T>({
         </div>
       );
     }
+
+    return null;
   };
 
   if (isEmptyState) {

@@ -1,4 +1,4 @@
-import {Box} from '@chakra-ui/layout';
+import {Box} from '@chakra-ui/react';
 import {useState} from 'react';
 import {ErrorBoundary} from 'react-error-boundary';
 import {PageErrorFallback} from '~/shared/page-error';

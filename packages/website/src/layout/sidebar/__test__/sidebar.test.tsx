@@ -1,7 +1,5 @@
-import {AuthProvider} from '@/context/auth';
-import {wrap, wrapComponent} from '@/__test__/wrap';
-import {ChakraProvider} from '@chakra-ui/react';
-import {createTestDatabase, DatabaseProvider} from '@guava/database';
+import {wrapComponent} from '@/__test__/wrap';
+import {createTestDatabase} from '@guava/database';
 import {render, waitFor} from '@testing-library/react';
 import {Sidebar} from '..';
 

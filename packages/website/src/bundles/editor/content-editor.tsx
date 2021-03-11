@@ -2,6 +2,7 @@ import {Box, BoxProps} from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import {Content, Editor, Extensions} from '@tiptap/core';
 import Highlight from '@tiptap/extension-highlight';
+import Typography from '@tiptap/extension-typography';
 import Underline from '@tiptap/extension-underline';
 import {defaultExtensions} from '@tiptap/starter-kit';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
@@ -42,6 +43,7 @@ const ContentEditor = (props: ContentEditorProps) => {
     Highlight,
     Underline,
     MathExtension,
+    Typography,
   ];
 
   const extensions: Extensions = useMemo(getExtensions, []);

@@ -1,15 +1,3 @@
-import {
-  chainCommands,
-  createParagraphNear,
-  deleteSelection,
-  joinBackward,
-  joinForward,
-  liftEmptyBlock,
-  newlineInCode,
-  selectNodeBackward,
-  selectNodeForward,
-  splitBlock,
-} from 'prosemirror-commands';
 import {keymap} from 'prosemirror-keymap';
 import {
   EditorState,
@@ -17,11 +5,8 @@ import {
   Plugin as ProsePlugin,
   Transaction,
 } from 'prosemirror-state';
-import {mathBackspace} from './math-backspace';
 import {mathInputRules} from './math-inputrules';
-import {mathPlugin} from './math-plugin';
 import {editorSchema} from './math-schema';
-import mathSelectPlugin from './math-select';
 import './styles.css';
 
 export function insertMath() {
@@ -45,25 +30,25 @@ export function insertMath() {
 }
 
 export const mathPlugins: ProsePlugin[] = [
-  mathPlugin,
-  mathSelectPlugin,
+  // mathPlugin,
+  // mathSelectPlugin,
   keymap({
     'Mod-Space': insertMath(),
-    // below is the default keymap
-    Enter: chainCommands(
-      newlineInCode,
-      createParagraphNear,
-      liftEmptyBlock,
-      splitBlock,
-    ),
-    'Ctrl-Enter': chainCommands(newlineInCode, createParagraphNear, splitBlock),
-    Backspace: chainCommands(
-      deleteSelection,
-      mathBackspace,
-      joinBackward,
-      selectNodeBackward,
-    ),
-    Delete: chainCommands(deleteSelection, joinForward, selectNodeForward),
+    // // below is the default keymap
+    // Enter: chainCommands(
+    //   newlineInCode,
+    //   createParagraphNear,
+    //   liftEmptyBlock,
+    //   splitBlock,
+    // ),
+    // 'Ctrl-Enter': chainCommands(newlineInCode, createParagraphNear, splitBlock),
+    // Backspace: chainCommands(
+    //   deleteSelection,
+    //   mathBackspace,
+    //   joinBackward,
+    //   selectNodeBackward,
+    // ),
+    // Delete: chainCommands(deleteSelection, joinForward, selectNodeForward),
   }),
   mathInputRules,
 ];

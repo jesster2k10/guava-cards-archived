@@ -2,13 +2,13 @@
  * Created by Jesse Onolememen. 26/02/2021
  */
 
-import {Deck} from '@guava/database';
 import {Box, BoxProps} from '@chakra-ui/react';
+import {Deck} from '@guava/database';
 import {DeckItem} from '../molecules/item';
 
 interface DeckListProps extends BoxProps {
   decks: Deck[];
-  isFetching?: boolean;
+  // isFetching?: boolean;
 }
 
 const DeckList = ({decks}: DeckListProps) => {

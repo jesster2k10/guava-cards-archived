@@ -1,6 +1,6 @@
 import {AppState} from '@/application/store';
+import {uid} from '@/utils/uid';
 import {Card, CardType} from '@guava/database';
-import {NewCardInputType} from '@guava/validation';
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {createSelector} from 'reselect';
 import {EditorValue} from '~/editor';
@@ -9,12 +9,16 @@ import {EditorValue} from '~/editor';
 
 export type AddCardEditor = CardType;
 export type EditorValueType = 'front' | 'back';
+export type ListEditorBlockType = {
+  id: string;
+  value: EditorValue;
+};
 
 export interface AddCardsFormState {
-  values: NewCardInputType;
   errors: Record<string, string | string[] | null>;
-  editor: AddCardEditor;
+  editorType: AddCardEditor;
   editorValues: Record<EditorValueType, EditorValue>;
+  listBlocks?: ListEditorBlockType[];
 }
 
 export interface AddCardsState {
@@ -49,9 +53,9 @@ const addCardStore = createSlice({
       state.form[deckId] ||= {
         previous: [],
         current: {
-          values: {},
+          listBlocks: [{id: uid(), value: null}],
           errors: {},
-          editor: 'basic',
+          editorType: 'basic',
           editorValues: {
             front: null,
             back: null,
@@ -71,12 +75,12 @@ const addCardStore = createSlice({
     ) => {
       const {editor, deckId} = payload;
       state.form[deckId].current ||= {
-        values: {},
         errors: {},
-        editor,
+        editorType: editor,
         editorValues: {front: null, back: null},
+        listBlocks: [{id: uid(), value: null}],
       };
-      state.form[deckId].current.editor = editor;
+      state.form[deckId].current.editorType = editor;
     },
     setEditorValue: (
       state,
@@ -89,6 +93,16 @@ const addCardStore = createSlice({
       const {deckId, value, type} = action.payload;
       state.form[deckId].current.editorValues ||= {front: null, back: null};
       state.form[deckId].current.editorValues[type] = value;
+    },
+    setEditorListBlocks: (
+      state,
+      action: PayloadAction<{
+        deckId: string;
+        blocks: ListEditorBlockType[];
+      }>,
+    ) => {
+      const {deckId, blocks} = action.payload;
+      state.form[deckId].current.listBlocks = blocks;
     },
   },
 });
@@ -108,7 +122,10 @@ export const currentFormSelector = (deckId: string) =>
   );
 
 export const currentEditorSelector = (deckId: string) =>
-  createSelector(currentFormSelector(deckId), form => form.editor || 'basic');
+  createSelector(
+    currentFormSelector(deckId),
+    form => form.editorType || 'basic',
+  );
 
 export const currentEditorValuesSelector = (deckId: string) =>
   createSelector(currentFormSelector(deckId), form => form.editorValues || {});
@@ -122,12 +139,16 @@ export const currentEditorValueSelector = (
     form => form.editorValues[valueType] || {},
   );
 
+export const currentEditorListBlocks = (deckId: string) =>
+  createSelector(currentFormSelector(deckId), form => form.listBlocks || []);
+
 // MARK:- Exports
 
 export const {
   initialize: initialzeCardEditor,
   setEditor: setCardEditor,
   setEditorValue: setCardEditorValue,
+  setEditorListBlocks: setCardEditorListBlocks,
 } = addCardStore.actions;
 
 export const addCardsReducer = addCardStore.reducer;

@@ -10,9 +10,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: './tsconfig.json',
   },
-  plugins: ['prettier'],
   rules: {
-    'prettier/prettier': 'error',
     'import/prefer-default-export': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -21,6 +19,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars-experimental': 'warn',
     'arrow-body-style': 'off',
+    'no-console': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -48,5 +47,6 @@ module.exports = {
       {js: 'never', ts: 'never', tsx: 'never', jsx: 'never', json: 'always'},
     ],
     'react/require-default-props': 'off',
+    'react/prop-types': 'off',
   },
 };

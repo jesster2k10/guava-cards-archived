@@ -1,9 +1,19 @@
-import React from 'react';
+import {ListEditorBlockType} from '~/cards/store';
+import {ListEditorBlock} from './block';
 
-export interface ListEditorProps {}
+export interface ListEditorProps {
+  blocks: ListEditorBlockType[];
+  setBlocks: (blocks: ListEditorBlockType[]) => void;
+}
 
-const ListEditor = () => {
-  return <div>Hi</div>;
+const ListEditor = ({blocks, setBlocks}: ListEditorProps) => {
+  return (
+    <div>
+      {blocks.map(block => (
+        <ListEditorBlock id={block.id} value={block.value} />
+      ))}
+    </div>
+  );
 };
 
 export {ListEditor};

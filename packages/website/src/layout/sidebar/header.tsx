@@ -2,15 +2,7 @@
  * Created by Jesse Onolememen. 26/02/2021
  */
 
-import {
-  Box,
-  BoxProps,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Button,
-} from '@chakra-ui/react';
+import {Box, BoxProps} from '@chakra-ui/react';
 import MdcMenuSwap from '@meronex/icons/mdc/MdcMenuSwap';
 import {UserRow} from '../../bundles/users/row';
 

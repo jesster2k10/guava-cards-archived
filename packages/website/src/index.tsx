@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {App} from './application/app';
+import {App} from './application/App';
 import './application/main.css';
 import './config/globals';
 import reportWebVitals from './reportWebVitals';

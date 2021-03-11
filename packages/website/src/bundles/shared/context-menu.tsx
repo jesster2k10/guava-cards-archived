@@ -1,6 +1,6 @@
-import React, {Children, useState, useRef, useCallback, useEffect} from 'react';
 import {Box, SlideFade} from '@chakra-ui/react';
-import {IContextMenuGroup, ContextMenuGroup} from './context-menu-group';
+import React, {Children, useCallback, useEffect, useRef, useState} from 'react';
+import {ContextMenuGroup, IContextMenuGroup} from './context-menu-group';
 import {ContextMenuItem, IContextMenuItem} from './context-menu-item';
 
 interface ContextMenuProps {
@@ -48,6 +48,8 @@ const ContextMenu = ({children, items, groups}: ContextMenuProps) => {
     document.addEventListener('click', handleCloseMenu);
     current.addEventListener('contextmenu', handleContextMenu);
     document.addEventListener('visibilitychange', handleCloseMenu);
+
+    // eslint-disable-next-line consistent-return
     return () => {
       document.removeEventListener('click', handleCloseMenu);
       current.removeEventListener('contextmenu', handleContextMenu);

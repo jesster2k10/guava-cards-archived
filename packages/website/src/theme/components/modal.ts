@@ -1,12 +1,12 @@
-import {ModalContent} from '@chakra-ui/react';
+// import {ModalContent} from '@chakra-ui/react';
 
-ModalContent.defaultProps = {
-  rounded: 'sm',
-  background: 'bgAlt',
-  shadow: 'md',
-  borderWidth: '0.5px',
-  borderColor: 'borderLight',
-};
+// ModalContent.defaultProps = {
+//   rounded: 'sm',
+//   background: 'bgAlt',
+//   shadow: 'md',
+//   borderWidth: '0.5px',
+//   borderColor: 'borderLight',
+// };
 
 export default {
   parts: ['modal', 'content', 'header', 'body', 'closeButton'],

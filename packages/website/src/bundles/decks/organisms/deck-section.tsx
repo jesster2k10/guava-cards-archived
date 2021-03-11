@@ -1,7 +1,7 @@
-import React from 'react';
 import FilterIcon from '@meronex/icons/bi/BiFilterAlt';
 import SearchIcon from '@meronex/icons/bi/BiSearch';
 import AddCardIcon from '@meronex/icons/md/MdAddCircleOutline';
+import React, {Fragment} from 'react';
 import {Section} from '~/shared/section';
 
 export enum DeckSectionActions {
@@ -17,12 +17,12 @@ export interface DeckSectionProps {
   onAction?: (action: DeckSectionActions, params?: any) => void;
 }
 
-export const DeckSection: React.FC<DeckSectionProps> = ({
+export const DeckSection = ({
   title,
   actions = [],
   onAction,
   children,
-}) => {
+}: DeckSectionProps) => {
   const iconForAction = (action: DeckSectionActions) => {
     switch (action) {
       case DeckSectionActions.SEARCH:
@@ -31,6 +31,8 @@ export const DeckSection: React.FC<DeckSectionProps> = ({
         return FilterIcon;
       case DeckSectionActions.ADD_CARD:
         return AddCardIcon;
+      default:
+        return Fragment;
     }
   };
 

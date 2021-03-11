@@ -1,6 +1,5 @@
-// @ts-nocheck
 import {paths} from '../application/paths';
 
-window.paths = paths;
+(window as any).paths = paths;
 
 export {};

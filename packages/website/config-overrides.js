@@ -43,12 +43,17 @@ module.exports = override(
   addBundleVisualizer({}, true),
   // addReactRefresh(),
   config => {
-    config.plugins.find(
-      plugin => plugin instanceof ESLintPlugin,
-    ).options.emitWarning = false;
-    config.plugins.find(
-      plugin => plugin instanceof ESLintPlugin,
-    ).options.cache = true;
+    // config.plugins.find(
+    //   plugin => plugin instanceof ESLintPlugin,
+    // ).options.emitWarning = false;
+    // config.plugins.find(
+    //   plugin => plugin instanceof ESLintPlugin,
+    // ).options.cache = true;
+
+    config.plugins[
+      config.plugins.findIndex(plugin => plugin instanceof ESLintPlugin)
+    ] = undefined;
+    config.plugins = config.plugins.filter(item => !!item);
     return config;
   },
   // setWebpackTarget('electron-renderer'),

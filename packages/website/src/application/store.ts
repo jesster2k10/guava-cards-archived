@@ -27,7 +27,7 @@ const store = configureStore({
   ],
 });
 
-store.replaceReducer(persistedReducer as any);
+store.replaceReducer(persistedReducer as never);
 
 const persistor = persistStore(store);
 

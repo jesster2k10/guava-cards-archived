@@ -1,14 +1,11 @@
+import {BoxProps, HStack} from '@chakra-ui/react';
 import React from 'react';
-import {HStack, BoxProps} from '@chakra-ui/layout';
 
 export interface SectionAsideProps extends BoxProps {
   children: React.ReactNode;
 }
 
-export const SectionAside: React.FC<SectionAsideProps> = ({
-  children,
-  ...props
-}) => (
+export const SectionAside = ({children, ...props}: SectionAsideProps) => (
   <HStack as="aside" {...props}>
     {children}
   </HStack>

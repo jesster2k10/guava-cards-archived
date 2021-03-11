@@ -5,7 +5,7 @@ interface NotFoundPageProps {
   error?: NotFoundError;
 }
 
-const NotFoundPage = ({error}: NotFoundPageProps) => {
+const NotFoundPage = ({error: _error}: NotFoundPageProps) => {
   return <Box>404 Bitch</Box>;
 };
 

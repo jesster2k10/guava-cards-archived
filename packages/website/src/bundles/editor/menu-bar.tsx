@@ -1,5 +1,5 @@
 import {Box, chakra, SlideFade} from '@chakra-ui/react';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useEditor} from './context';
 import * as Icons from './icons';
 import {MenuAction} from './menu-action';
@@ -11,6 +11,8 @@ interface MenuBarProps {
 export const MenuBar = ({label}: MenuBarProps) => {
   const editor = useEditor();
   const isVisible = editor.isFocused || !editor.isEmpty();
+  const [focused, setFocused] = useState(editor.isFocused);
+  const [toggledAction, setToggledAction] = useState(false);
 
   const toggleHeading = (level: any) => {
     editor.chain().focus().toggleHeading({level}).run();
@@ -18,6 +20,15 @@ export const MenuBar = ({label}: MenuBarProps) => {
   const separator = (
     <chakra.span w="1px" h={5} bg="borderLight" ml={2} mr={3} />
   );
+
+  useEffect(() => {
+    if (toggledAction && editor.isFocused) {
+      setToggledAction(false);
+    } else {
+      setFocused(editor.isFocused);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [editor.isFocused]);
 
   return (
     <Box pos="relative">

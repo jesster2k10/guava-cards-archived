@@ -11,6 +11,8 @@ export function NewCardPage() {
     setCurrentEditor,
     editorValues,
     setEditorValue,
+    editorListBlocks,
+    setEditorListBlocks,
   } = useCardEditorPage();
 
   return (
@@ -19,6 +21,7 @@ export function NewCardPage() {
         currentEditor={currentEditor}
         setCurrentEditor={setCurrentEditor}
       />
+      {/* <ListEditor blocks={editorListBlocks} setBlocks={setEditorListBlocks} /> */}
       <ContentEditor
         value={editorValues.front}
         onChange={value => setEditorValue('front', value)}

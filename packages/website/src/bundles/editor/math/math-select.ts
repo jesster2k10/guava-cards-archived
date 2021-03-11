@@ -4,14 +4,14 @@
  *--------------------------------------------------------*/
 
 // prosemirror imports
+import {Node as ProseNode} from 'prosemirror-model';
 import {
   EditorState,
-  Transaction,
-  Selection as ProseSelection,
   Plugin as ProsePlugin,
+  Selection as ProseSelection,
+  Transaction,
 } from 'prosemirror-state';
-import {DecorationSet, Decoration} from 'prosemirror-view';
-import {Fragment, Node as ProseNode} from 'prosemirror-model';
+import {Decoration, DecorationSet} from 'prosemirror-view';
 
 /// /////////////////////////////////////////////////////////
 
@@ -28,7 +28,7 @@ const checkSelection = (arg: {selection: ProseSelection; doc: ProseNode}) => {
   const result: {start: number; end: number}[] = [];
 
   content.descendants((node: ProseNode, pos: number, parent: ProseNode) => {
-    if (node.type.name == 'text') {
+    if (node.type.name === 'text') {
       return false;
     }
     if (node.type.name.startsWith('math_')) {

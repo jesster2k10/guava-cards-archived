@@ -1,17 +1,16 @@
-import {useFindSuspense, useObservableValue} from '@guava/core';
-import {Breadcrumbs} from '@/layout/page/breadcrumbs';
 import {paths} from '@/application/paths';
 import {Page} from '@/layout/page';
-import {HStack, VStack} from '@chakra-ui/layout';
-import dayjs from 'dayjs';
+import {Breadcrumbs} from '@/layout/page/breadcrumbs';
+import {Button, HStack, VStack} from '@chakra-ui/react';
+import {useFindSuspense, useObservableValue} from '@guava/core';
 import ClockIcon from '@meronex/icons/ai/AiOutlineClockCircle';
 import CardsIcon from '@meronex/icons/mdc/MdcCardsOutline';
+import dayjs from 'dayjs';
 import {useMemo} from 'react';
-import {Button} from '@chakra-ui/button';
 import {useNavigate} from 'react-router';
+import {IconText} from '~/shared/icon-text';
 import {List} from '~/shared/list';
 import {DeckSection, DeckSectionActions} from '../organisms/deck-section';
-import {IconText} from '~/shared/icon-text';
 
 export interface DeckDetailProps {
   deckId: string;

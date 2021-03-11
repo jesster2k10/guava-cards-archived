@@ -1,6 +1,9 @@
 packages/observable-hooks/src/**/*
+packages/website/src/bundles/editor/math/*.ts
+
 .eslintrc.js
 *.svg
 **/dist/**/*
 **/node_modules/**/*
 *.lock
+**/*.stories.tsx

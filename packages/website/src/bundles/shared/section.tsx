@@ -1,7 +1,7 @@
+import {Box, BoxProps} from '@chakra-ui/react';
 import React, {Children} from 'react';
-import {Box, BoxProps} from '@chakra-ui/layout';
-import {SectionHeader} from './section-header';
 import {SectionBody} from './section-body';
+import {SectionHeader} from './section-header';
 
 export interface SectionProps extends BoxProps {
   title?: string;

@@ -6,11 +6,14 @@ import {useCallback, useEffect, useMemo} from 'react';
 import {EditorValue} from '~/editor';
 import {
   AddCardEditor,
+  currentEditorListBlocks,
   currentEditorSelector,
   currentEditorValuesSelector,
   EditorValueType,
   initialzeCardEditor,
+  ListEditorBlockType,
   setCardEditor,
+  setCardEditorListBlocks,
   setCardEditorValue,
 } from './store';
 
@@ -18,6 +21,7 @@ export function useCardEditor(deckId: string) {
   const dispatch = useAppDispatch();
   const currentEditor = useAppSelector(currentEditorSelector(deckId));
   const editorValues = useAppSelector(currentEditorValuesSelector(deckId));
+  const editorListBlocks = useAppSelector(currentEditorListBlocks(deckId));
 
   useEffect(() => {
     dispatch(initialzeCardEditor({deckId}));
@@ -40,11 +44,24 @@ export function useCardEditor(deckId: string) {
     [deckId, dispatch],
   );
 
+  const setEditorListBlocks = useCallback(
+    (blocks: ListEditorBlockType[]) =>
+      dispatch(
+        setCardEditorListBlocks({
+          blocks,
+          deckId,
+        }),
+      ),
+    [deckId, dispatch],
+  );
+
   return {
     currentEditor,
     setCurrentEditor,
     editorValues,
     setEditorValue,
+    setEditorListBlocks,
+    editorListBlocks,
   };
 }
 

@@ -1,13 +1,11 @@
 import {paths} from '@/application/paths';
-import {BoxProps} from '@chakra-ui/layout';
+import {BoxProps, chakra} from '@chakra-ui/react';
 import {Deck} from '@guava/database';
-import {chakra} from '@chakra-ui/react';
-
+import AddToQueueIcon from '@meronex/icons/bi/BiAddToQueue';
 import EditIcon from '@meronex/icons/bi/BiEdit';
+import FolderIcon from '@meronex/icons/bi/BiFolder';
 import StudyIcon from '@meronex/icons/bi/BiPlayCircle';
 import SortDownIcon from '@meronex/icons/bi/BiSortDown';
-import AddToQueueIcon from '@meronex/icons/bi/BiAddToQueue';
-import FolderIcon from '@meronex/icons/bi/BiFolder';
 import SortUpIcon from '@meronex/icons/bi/BiSortUp';
 import dayjs from 'dayjs';
 import {ContextMenu} from '~/shared/context-menu';
